@@ -30,6 +30,9 @@ set_log_max_days=${set_log_max_days:-3}                      #log_max_days = 3
 # in square brackets, as in "[::1]:80", "[ipv6-host]:http" or "[ipv6-host%zone]:80"
 bind_addr = 0.0.0.0
 bind_port = ${set_bind_port}
+# udp port used for kcp protocol, it can be same with 'bind_port'
+# if not set, kcp is disabled in frps
+kcp_bind_port = ${set_bind_port}
 # if you want to configure or reload frps by dashboard, dashboard_port must be set
 dashboard_port = ${set_dashboard_port}
 # dashboard user and pwd for basic auth protect, if not set, both default value is admin
