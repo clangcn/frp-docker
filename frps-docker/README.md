@@ -28,7 +28,12 @@ RHEL、CentOS、Fedora的用户可以使用`setenforce 0`来禁用selinux以达�
 
 # 二、安装
 ##下载镜像导入
-从项目中下载docker images后导入，镜像下载地址：
+从项目中下载docker images后导入，阿里云镜像下载：
+```bash
+wget --no-check-certificate https://code.aliyun.com/clangcn/frp-docker/raw/master/frps-docker/frps-docker.tar
+```
+
+github镜像下载地址：
 ```bash
 wget --no-check-certificate https://github.com/clangcn/frp-docker/raw/master/frps-docker/frps-docker.tar
 ```
