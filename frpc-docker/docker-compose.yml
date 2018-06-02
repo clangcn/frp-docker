@@ -1,0 +1,11 @@
+version: '2'
+services:
+  frpc-docker:
+    image: frpc-docker:latest
+    container_name: frpc-docker
+    hostname: frpc-docker
+    volumes:
+      - "./frpc.ini:/usr/local/frpc/frpc.ini"
+    environment:
+      - str_log_level=info
+    restart: always

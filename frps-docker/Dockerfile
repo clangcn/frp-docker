@@ -2,7 +2,7 @@
 FROM alpine:latest
 MAINTAINER clangcn@gmail.com
 
-ENV frps_version=0.12.0 \
+ENV frps_version=0.20.0 \
     frps_DIR=/usr/local/frps
 
 RUN set -ex && \

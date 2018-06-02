@@ -2,7 +2,7 @@
 FROM alpine:latest
 MAINTAINER clangcn@gmail.com
 
-ENV frpc_version=0.12.0 \
+ENV frpc_version=0.20.0 \
     frpc_DIR=/usr/local/frpc
 
 RUN set -ex && \
@@ -18,6 +18,5 @@ RUN set -ex && \
     rm -rf /var/cache/apk/* ~/.cache ${frpc_DIR}/${frpc_latest_filename} ${frpc_DIR}/frp_${frpc_version}_linux_amd64
 
 ADD entrypoint.sh /entrypoint.sh
-ADD start_frpc.sh /start_frpc.sh
-RUN chmod +x /entrypoint.sh /start_frpc.sh
+RUN chmod +x /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
