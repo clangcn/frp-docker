@@ -60,7 +60,7 @@ docker run -h="frps-docker" --name frps-docker -d \
 
 | 变量名 | 默认值  | 描述 |
 | :------------------- |:-----------:| :------------------------------------------------ |
-| set_privilege_token  | password    | frps的特权密码，用于客户端连接                         |
+| set_token            | password    | frps的特权密码，用于客户端连接                         |
 | set_subdomain_host   |             | frps子域名设置，默认为空，可以输入类似abc.com这样的域名   |
 | set_max_pool_count   | 50          | 最大连接池数，貌似不用这个了                           |
 | str_log_level        | info        | 日志等级，可选项：debug, info, warn, error           |
