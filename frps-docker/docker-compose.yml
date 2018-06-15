@@ -7,9 +7,14 @@ services:
     environment:
       - set_token=password
       - set_subdomain_host=
+      - set_dashboard_user=admin
+      - set_dashboard_pwd=admin
       - set_max_pool_count=50
-      - str_log_level=info
+      - set_max_ports_per_client=0
+      - set_authentication_timeout=900
+      - set_log_level=info
       - set_log_max_days=3
+      - set_tcp_mux=true
     ports:
       - "6443:5443/tcp"
       - "6443:5443/udp"

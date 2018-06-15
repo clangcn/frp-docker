@@ -39,7 +39,7 @@ docker run -h="frps-docker" --name frps-docker -d \
 -e set_token=password \
 -e set_subdomain_host= \
 -e set_max_pool_count=50 \
--e str_log_level=info \
+-e set_log_level=info \
 -e set_log_max_days=3 \
 "frps-docker:latest"
 ```
@@ -59,10 +59,15 @@ docker run -h="frps-docker" --name frps-docker -d \
 ##变量说明（变量名区分大小写）
 
 | 变量名 | 默认值  | 描述 |
-| :------------------- |:-----------:| :------------------------------------------------ |
-| set_token            | password    | frps的特权密码，用于客户端连接                         |
-| set_subdomain_host   |             | frps子域名设置，默认为空，可以输入类似abc.com这样的域名   |
-| set_max_pool_count   | 50          | 最大连接池数，貌似不用这个了                           |
-| str_log_level        | info        | 日志等级，可选项：debug, info, warn, error           |
-| set_log_max_days     | 3           | 日志保存天数，默认保存3天的                            |
+| :-------------------------- |:-----------:| :------------------------------------------------ |
+| set_token                   | password    | frps的认证密码，用于客户端连接                         |
+| set_subdomain_host          |             | frps子域名设置，默认为空，可以输入类似abc.com这样的域名   |
+| set_dashboard_user          | admin       | frps控制台用户名                                    |
+| set_dashboard_pwd           | admin       | frps控制台密码                                      |
+| set_max_pool_count          | 50          | 最大连接池数，貌似不用这个了                           |
+| set_max_ports_per_client    | 0           | 允许连入的最大客户端，0为不限制                        |
+| set_authentication_timeout  | 900         | 验证时间，单位为秒，默认900s                          |
+| str_log_level               | info        | 日志等级，可选项：debug, info, warn, error           |
+| set_log_max_days            | 3           | 日志保存天数，默认保存3天的                            |
+| set_tcp_mux                 | true        | TCP 多路复用                                       |
 
